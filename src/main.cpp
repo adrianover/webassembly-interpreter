@@ -16,13 +16,16 @@ int main(int argc, char* argv[]) {
     // std::string wasm_path = argv[1];
     // std::string wat_path = argv[2];
 
-    std::string first_wat = "../01_test.wat";
-    std::string first_wasm = "../01_test.wasm";
-    std::string second_wat = "../02_test_prio1.wat";
-    std::string second_asm = "../02_test_prio1.wasm";
-
-    std::vector<std::string> wasm_files = {"../01_test.wasm", "../02_test_prio1.wasm"};
-    std::vector<std::string> wat_files = {"../01_test.wat", "../02_test_prio1.wat"};
+    std::vector<std::string> wasm_files = {
+        "../01_test.wasm",
+        "../02_test_prio1.wasm",
+        "../03_test_prio2.wasm"
+    };
+    std::vector<std::string> wat_files = {
+        "../01_test.wat",
+        "../02_test_prio1.wat",
+        "../03_test_prio2.wat",
+    };
 
     bool all_passed = true;
 

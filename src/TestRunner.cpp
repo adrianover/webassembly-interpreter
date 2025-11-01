@@ -27,7 +27,7 @@ void TestRunner::parse_tests_from_wat(const std::string& wat_path) {
         }
 
         // Find the expected result
-        size_t expected_pos = line.find(";; Expected result at address[0]:");
+        size_t expected_pos = line.find(";; Expected result at address");
         if (expected_pos != std::string::npos) {
             std::string result_str = line.substr(expected_pos + 31);
             size_t digit_pos = result_str.find_first_of("-0123456789");
@@ -61,11 +61,10 @@ void TestRunner::parse_tests_from_wat(const std::string& wat_path) {
 
 bool TestRunner::run(const Module& module) {
     int passed_count = 0;
+    Interpreter interpreter(module);
 
     for (const auto& test : test_cases) {
         std::cout << "\n--- Running Test: " << test.description << " (func " << test.function_index << ") ---" << std::endl;
-
-        Interpreter interpreter(module);
 
         try {
             interpreter.invoke(test.function_index);

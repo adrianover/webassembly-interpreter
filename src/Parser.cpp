@@ -161,8 +161,13 @@ void Parser::parse_code_section(Module& module) {
 
         uint32_t num_local_entries = decode_leb128_u();
         for (uint32_t j = 0; j < num_local_entries; ++j) {
-            decode_leb128_u(); // count
-            read_byte();       // type
+            uint32_t count = decode_leb128_u();
+
+            ValueType type = static_cast<ValueType>(read_byte());
+
+            for (uint32_t k = 0; k < count; ++k) {
+                func.locals.push_back(type);
+            }
         }
 
         func.code.assign(binary.begin() + offset, binary.begin() + body_end -1);
