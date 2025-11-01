@@ -3,4 +3,4 @@ project(webassembly_interpreter)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(webassembly_interpreter src/main.cpp src/Parser.cpp)
+add_executable(webassembly_interpreter src/main.cpp src/Interpreter.cpp src/Parser.cpp src/TestRunner.cpp)
