@@ -1,0 +1,3 @@
+add_executable(my_wasm_interpreter main.cpp)
+
+target_link_libraries(my_wasm_interpreter PRIVATE InterpreterLib)
