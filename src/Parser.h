@@ -36,6 +36,8 @@ private:
 
     uint32_t decode_leb128_u();
 
+    int32_t decode_leb128_s();
+
     void validate_header();
 
     void parse_type_section(Module& module);

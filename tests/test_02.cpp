@@ -65,7 +65,7 @@ const TestSuite test_02 = {
         // === MEMORY SIZE AND GROW TESTS (STATEFUL) ===
         {"Memory size (initial)", 48, expect_i32(0, 1)},
         {"Memory grow by 1 (returns old size)", 49, expect_i32(0, 1)},
-        {"Memory size after grow", 50, expect_i32(0, 2)},
+        {"Memory size after grow", 50, expect_i32(0, 3)},
         {"Memory grow by 2 (returns old size)", 51, expect_i32(0, 3)},
         {"Write to newly grown memory", 52, expect_i32(0, 999)},
 

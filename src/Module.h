@@ -15,6 +15,13 @@ enum class ValueType : uint8_t {
     F64 = 0x7c,
 };
 
+union Value {
+    int32_t i32;
+    int64_t i64;
+    float   f32;
+    double  f64;
+};
+
 /**
  * @brief Represents a function signature (parameter types and result types).
  * This corresponds to an entry in the Type Section (ID 1).
@@ -31,6 +38,7 @@ struct FunctionType {
 struct GlobalType {
     ValueType type;
     bool is_mutable;
+    Value initial_value;
 };
 
 /**

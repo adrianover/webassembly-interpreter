@@ -10,14 +10,27 @@
 #include "../src/Interpreter.h"
 #include "test_01.cpp"
 #include "test_02.cpp"
+#include "test_03.cpp"
+#include "test_04.cpp"
+#include "test_05.cpp"
+#include "test_06.cpp"
+#include "test_07.cpp"
+#include "test_08.cpp"
+#include "test_09.cpp"
 
 const std::vector all_suites_to_run = {
     test_01,
-    test_02
+    test_02,
+    test_03,
+    test_04,
+    test_05,
+    test_06,
+    test_07,
+    test_08,
+    test_09,
 };
 
 std::vector<uint8_t> load_wasm_file(const std::string& path) {
-    std::cout <<  "Path: " << std::filesystem::current_path() << std::endl;
     std::ifstream file(path, std::ios::binary);
     if (!file.is_open()) throw std::runtime_error("Failed to open file: " + path);
     return {(std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>()};

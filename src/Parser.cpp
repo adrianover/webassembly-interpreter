@@ -64,6 +64,27 @@ uint32_t Parser::decode_leb128_u() {
     return result;
 }
 
+int32_t Parser::decode_leb128_s() {
+    int32_t result = 0;
+    int shift = 0;
+
+    while (true) {
+        uint8_t byte = read_byte();
+        result |= (byte & 0x7f) << shift;
+        shift += 7;
+
+        if ((byte & 0x80) == 0) {
+            // Sign extension if the sign bit of the last byte is set
+            if ((shift < 32) && (byte & 0x40)) {
+                result |= (~0 << shift);
+            }
+            break;
+        }
+    }
+
+    return result;
+}
+
 void Parser::validate_header() {
     if (binary.size() < 8) {
         throw std::runtime_error("File is too small to be a wasm module.");
@@ -125,7 +146,14 @@ void Parser::parse_global_section(Module& module) {
         gtype.type = static_cast<ValueType>(read_byte());
         gtype.is_mutable = (read_byte() == 0x01);
 
-        while(read_byte() != 0x0b);
+        uint8_t opcode = read_byte();
+        if (opcode == 0x41) { // i32.const
+            gtype.initial_value.i32 = decode_leb128_s();
+        }
+
+        if (read_byte() != 0x0B) {
+            throw std::runtime_error("Expected 'end' opcode after global initializer");
+        }
 
         module.globals.push_back(gtype);
     }
