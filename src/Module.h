@@ -15,6 +15,9 @@ enum class ValueType : uint8_t {
     F64 = 0x7c,
 };
 
+/**
+ * @brief Represents the values that variables can have.
+ */
 union Value {
     int32_t i32;
     int64_t i64;

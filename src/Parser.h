@@ -13,6 +13,14 @@
 const std::vector<uint8_t> magic_number = {0x00, 0x61, 0x73, 0x6d};
 const std::vector<uint8_t> version = {0x01, 0x00, 0x00, 0x00};
 
+/**
+ * @class Parser
+ * @brief A single-pass parser for the WebAssembly binary format.
+ *
+ * This class reads a raw byte vector representing a .wasm file, validates its
+ * header, and iterates through its sections to populate a static `Module` object.
+ * It is designed to be a simple, forward-only parser that throws exceptions on malformed input.
+ */
 class Parser {
 public:
     /**

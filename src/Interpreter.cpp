@@ -1,4 +1,5 @@
 #include "Interpreter.h"
+#include "cross_platform.h"
 #include <stdexcept>
 #include <iostream>
 #include <sstream>
@@ -209,8 +210,8 @@ void Interpreter::execute() {
             case 0x66: execute_comparison_op<double>([](double a, double b) { return a >= b; }); break; // f64.ge
 
             // === ARITHMETIC ===
-            case 0x67: execute_unary_op<int32_t>([](int32_t a) { return a ? __builtin_clz(a) : 32; }); break; // i32.clz
-            case 0x68: execute_unary_op<int32_t>([](int32_t a) { return a ? __builtin_ctz(a) : 32; }); break; // i32.ctz
+            case 0x67: execute_unary_op<int32_t>([](int32_t a) { return a ? clz32(a) : 32; }); break; // i32.clz
+            case 0x68: execute_unary_op<int32_t>([](int32_t a) { return a ? ctz32(a) : 32; }); break; // i32.ctz
             case 0x69: execute_unary_op<int32_t>([](int32_t a) { return std::popcount(static_cast<uint32_t>(a)); }); break; // i32.popcnt
             case 0x6A: execute_binary_op<int32_t>([](int32_t a, int32_t b) { return a + b; }); break; // i32.add
             case 0x6B: execute_binary_op<int32_t>([](int32_t a, int32_t b) { return a - b; }); break; // i32.sub
@@ -224,8 +225,8 @@ void Interpreter::execute() {
             case 0x77: execute_binary_op<int32_t>([](int32_t a, int32_t b) { return std::rotl(static_cast<uint32_t>(a), b); }); break; // i32.rotl
             case 0x78: execute_binary_op<int32_t>([](int32_t a, int32_t b) { return std::rotr(static_cast<uint32_t>(a), b); }); break; // i32.rotr
 
-            case 0x79: execute_unary_op<int64_t>([](int64_t a) { return a ? __builtin_clzll(a) : 64; }); break; // i64.clz
-            case 0x7A: execute_unary_op<int64_t>([](int64_t a) { return a ? __builtin_ctzll(a) : 64; }); break; // i64.ctz
+            case 0x79: execute_unary_op<int64_t>([](int64_t a) { return a ? clz64(a) : 64; }); break; // i64.clz
+            case 0x7A: execute_unary_op<int64_t>([](int64_t a) { return a ? ctz64(a) : 64; }); break; // i64.ctz
             case 0x7B: execute_unary_op<int64_t>([](int64_t a) { return std::popcount(static_cast<uint64_t>(a)); }); break; // i64.popcnt
             case 0x7C: execute_binary_op<int64_t>([](int64_t a, int64_t b) { return a + b; }); break; // i64.add
             case 0x7D: execute_binary_op<int64_t>([](int64_t a, int64_t b) { return a - b; }); break; // i64.sub

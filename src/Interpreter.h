@@ -4,8 +4,16 @@
 #include "Module.h"
 #include <vector>
 #include <functional>
+#include <stdexcept>
 
-
+/**
+ * @struct StackFrame
+ * @brief Represents the state of a single function call on the call stack.
+ *
+ * Each time a function is called, a new StackFrame is created and pushed onto
+ * the call stack. It contains all the state necessary to resume a parent function
+ * after a nested call completes.
+ */
 struct StackFrame {
     const Function* func;     // Pointer to the function being executed
     size_t pc;                // Program counter for that function
@@ -13,6 +21,12 @@ struct StackFrame {
     size_t control_stack_base;  // The base of this frame with reference to the stack
 };
 
+/**
+ * @struct ControlFrame
+ * @brief Represents a structured control flow block like `block`, `loop`, or `if`.
+ *
+ * These are pushed onto the control stack to manage the targets for branch instructions.
+ */
 struct ControlFrame {
     uint8_t opcode; // The opcode that created this block (if, block, loop)
     size_t end;     // PC to jump to end the block
@@ -21,17 +35,39 @@ struct ControlFrame {
 
 static constexpr size_t PAGE_SIZE = 65536; // Todo
 
+/**
+ * @class Interpreter
+ * @brief Executes the bytecode of a parsed WebAssembly Module.
+ *
+ * The Interpreter is a stack-based virtual machine that processes Wasm instructions
+ * sequentially. It is initialized with a static Module blueprint and manages all
+ * runtime state, including the call stack, operand stack, and linear memory.
+ */
 class Interpreter {
 public:
     explicit Interpreter(const Module& module);
 
+    /**
+     * @brief Begins execution by invoking a function by its index. This is the main entry point.
+     * @param function_index The index of the function to call in the module's function space.
+     */
     void invoke(uint32_t function_index);
 
-
-
+    /**
+     * @brief Retrieves a 32-bit integer from the interpreter's linear memory.
+     *
+     * @param address The byte address to read from.
+     * @return The i32 value at the specified address.
+     */
     int32_t get_memory_i32(uint32_t address) const;
-    float get_memory_f32(uint32_t address) const;
 
+    /**
+     * @brief Retrieves a 32-bit float from the interpreter's linear memory.
+     *
+     * @param address The byte address to read from.
+     * @return The f32 value at the specified address.
+     */
+    float get_memory_f32(uint32_t address) const;
 
 private:
     void execute();
