@@ -2,7 +2,7 @@
 
 const TestSuite test_02 = {
     "Test 02",
-    "../../tests/wasm/02_test_prio1.wasm",
+    std::string(WASM_TEST_DIR) + "/02_test_prio1.wasm",
     {
         // === FUNCTION CALL TESTS ===
         {"Call add(10, 5)", 0, expect_i32(0, 15)},

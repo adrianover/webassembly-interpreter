@@ -2,7 +2,7 @@
 
 const TestSuite test_08 = {
     "Test08",
-    "../../tests/wasm/08_test_post_mvp.wasm",
+    std::string(WASM_TEST_DIR) + "/08_test_post_mvp.wasm",
     {
         // === MULTIPLE RETURN VALUE TESTS ===
         {"Multi-return: Receive two values", 0, expect_i32(3000, 42)},

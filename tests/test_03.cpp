@@ -2,7 +2,7 @@
 
 const TestSuite test_03 = {
     "Test 03",
-    "../../tests/wasm/03_test_prio2.wasm",
+    std::string(WASM_TEST_DIR) + "/03_test_prio2.wasm",
     {
         // === DATA SEGMENT TESTS ===
         {"Data: Read char 'H'", 6, expect_i32(200, 72)},

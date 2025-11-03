@@ -2,7 +2,7 @@
 
 const TestSuite test_04 = {
     "Test04",
-    "../../tests/wasm/04_test_prio3.wasm",
+    std::string(WASM_TEST_DIR) + "/04_test_prio3.wasm",
     {
         // === UNSIGNED REMAINDER OPERATIONS ===
         {"i32.rem_u", 0, expect_i32(0, 2)},

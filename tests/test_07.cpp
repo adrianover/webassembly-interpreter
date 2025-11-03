@@ -2,7 +2,7 @@
 
 const TestSuite test_07 = {
     "Test07",
-    "../../tests/wasm/07_test_bulk_memory.wasm",
+    std::string(WASM_TEST_DIR) + "/07_test_bulk_memory.wasm",
     {
         // === memory.fill TESTS ===
             {"memory.fill: Basic", 0, expect_i32(0, 42)},

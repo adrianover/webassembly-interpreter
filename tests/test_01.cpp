@@ -2,7 +2,7 @@
 
 const TestSuite test_01 = {
     "Test 01",
-    "../../tests/wasm/01_test.wasm",
+    std::string(WASM_TEST_DIR) + "/01_test.wasm",
     {
         // === BASIC ARITHMETIC TESTS ===
         {"Store value 42", 0, expect_i32(0, 42)},

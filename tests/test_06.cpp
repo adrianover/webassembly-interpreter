@@ -3,7 +3,7 @@
 
 const TestSuite test_06 = {
     "Test06",
-    "../../tests/wasm/06_test_fc.wasm",
+    std::string(WASM_TEST_DIR) + "/06_test_fc.wasm",
     {
         // === i32.trunc_sat_f32_s TESTS ===
         {"i32.trunc_sat_f32_s: 10.5 -> 10", 0, expect_i32(0, 10)},

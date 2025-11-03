@@ -2,7 +2,7 @@
 
 const TestSuite test_05 = {
     "Test05",
-    "../../tests/wasm/05_test_complex.wasm",
+    std::string(WASM_TEST_DIR) + "/05_test_complex.wasm",
     {
             {"Deeply nested blocks with br", 0, expect_i32(0, 42)},
             {"Blocks with different result types", 1, expect_i32(0, 50)},
