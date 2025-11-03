@@ -1,0 +1,1433 @@
+=================================================
+  RUNNING SUITE: Test 01
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Global Section (ID 6)...
+Parsing Export Section (ID 7)...
+Parsing Code Section (ID 10)...
+Running: Store value 42
+Invoking function with index 0
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Addition
+Invoking function with index 1
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: Subtraction
+Invoking function with index 2
+Verifying i32. Result: 12, Expected: 12
+SUCCESS
+
+Running: Multiplication
+Invoking function with index 3
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Division (signed)
+Invoking function with index 4
+Verifying i32. Result: 5, Expected: 5
+SUCCESS
+
+Running: Division (unsigned)
+Invoking function with index 5
+Verifying i32. Result: 6, Expected: 6
+SUCCESS
+
+Running: Remainder (signed)
+Invoking function with index 6
+Verifying i32. Result: 2, Expected: 2
+SUCCESS
+
+Running: Bitwise AND
+Invoking function with index 7
+Verifying i32. Result: 10, Expected: 10
+SUCCESS
+
+Running: Bitwise OR
+Invoking function with index 8
+Verifying i32. Result: 14, Expected: 14
+SUCCESS
+
+Running: Bitwise XOR
+Invoking function with index 9
+Verifying i32. Result: 6, Expected: 6
+SUCCESS
+
+Running: Left shift
+Invoking function with index 10
+Verifying i32. Result: 20, Expected: 20
+SUCCESS
+
+Running: Right shift (signed)
+Invoking function with index 11
+Verifying i32. Result: -4, Expected: -4
+SUCCESS
+
+Running: Right shift (unsigned)
+Invoking function with index 12
+Verifying i32. Result: 4, Expected: 4
+SUCCESS
+
+Running: Store and Load
+Invoking function with index 13
+Verifying i32. Result: 99, Expected: 99
+SUCCESS
+
+Running: Store byte and load unsigned
+Invoking function with index 14
+Verifying i32. Result: 255, Expected: 255
+SUCCESS
+
+Running: Store byte and load signed
+Invoking function with index 15
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: Locals arithmetic
+Invoking function with index 16
+Verifying i32. Result: 35, Expected: 35
+SUCCESS
+
+Running: Local variable tee
+Invoking function with index 17
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: Global increment
+Invoking function with index 18
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Read constant global
+Invoking function with index 19
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: Multiple global operations
+Invoking function with index 20
+Verifying i32. Result: 11, Expected: 11
+SUCCESS
+
+Running: Combined operations
+Invoking function with index 21
+Verifying i32. Result: 142, Expected: 142
+SUCCESS
+
+Running: Equal
+Invoking function with index 22
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Not equal
+Invoking function with index 23
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Less than signed
+Invoking function with index 24
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Less than unsigned
+Invoking function with index 25
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Greater than signed
+Invoking function with index 26
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Greater than unsigned
+Invoking function with index 27
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Less than or equal signed
+Invoking function with index 28
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Greater than or equal signed
+Invoking function with index 29
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Equal zero (true)
+Invoking function with index 30
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Equal zero (false)
+Invoking function with index 31
+Verifying i32. Result: 0, Expected: 0
+SUCCESS
+
+Running: Count leading zeros
+Invoking function with index 32
+Verifying i32. Result: 28, Expected: 28
+SUCCESS
+
+Running: Count trailing zeros
+Invoking function with index 33
+Verifying i32. Result: 3, Expected: 3
+SUCCESS
+
+Running: Population count
+Invoking function with index 34
+Verifying i32. Result: 3, Expected: 3
+SUCCESS
+
+Running: Population count all bits
+Invoking function with index 35
+Verifying i32. Result: 32, Expected: 32
+SUCCESS
+
+Running: Rotate left
+Invoking function with index 36
+Verifying i32. Result: 16, Expected: 16
+SUCCESS
+
+Running: Rotate right
+Invoking function with index 37
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Rotate left with wrap
+Invoking function with index 38
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Store and load 16-bit unsigned
+Invoking function with index 39
+Verifying i32. Result: 65535, Expected: 65535
+SUCCESS
+
+Running: Store and load 16-bit signed
+Invoking function with index 40
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: Store 16-bit 32768 and load unsigned
+Invoking function with index 41
+Verifying i32. Result: 32768, Expected: 32768
+SUCCESS
+
+Running: Select (true)
+Invoking function with index 42
+Verifying i32. Result: 10, Expected: 10
+SUCCESS
+
+Running: Select (false)
+Invoking function with index 43
+Verifying i32. Result: 20, Expected: 20
+SUCCESS
+
+Running: If/else (true)
+Invoking function with index 44
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: If/else (false)
+Invoking function with index 45
+Verifying i32. Result: 200, Expected: 200
+SUCCESS
+
+Running: If without else
+Invoking function with index 46
+Verifying i32. Result: 50, Expected: 50
+SUCCESS
+
+Running: Nested if/else
+Invoking function with index 47
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Block with break (br_if)
+Invoking function with index 48
+Verifying i32. Result: 10, Expected: 10
+SUCCESS
+
+Running: Block without break
+Invoking function with index 49
+Verifying i32. Result: 20, Expected: 20
+SUCCESS
+
+Running: Loop to sum
+Invoking function with index 50
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: Loop with early break
+Invoking function with index 51
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: Branch table (case 0)
+Invoking function with index 52
+ERROR: Unknown or unimplemented opcode: 0x0E
+
+Running: Branch table (case 2)
+Invoking function with index 53
+ERROR: Unknown or unimplemented opcode: 0x0E
+
+Suite Summary: 52 / 54 passed.
+
+=================================================
+  RUNNING SUITE: Test 02
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Global Section (ID 6)...
+Parsing Export Section (ID 7)...
+Parsing Code Section (ID 10)...
+Running: Call add(10, 5)
+Invoking function with index 0
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: Call composition
+Invoking function with index 1
+Verifying i32. Result: 35, Expected: 35
+SUCCESS
+
+Running: Call square(7)
+Invoking function with index 2
+Verifying i32. Result: 49, Expected: 49
+SUCCESS
+
+Running: Multiple calls
+Invoking function with index 3
+Verifying i32. Result: 25, Expected: 25
+SUCCESS
+
+Running: Early return (true)
+Invoking function with index 4
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: Conditional return (false)
+Invoking function with index 5
+Verifying i32. Result: 100, Expected: 200
+FAILURE
+
+Running: Call abs (negative)
+Invoking function with index 6
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Call abs (positive)
+Invoking function with index 7
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Factorial of 5 (recursive)
+Invoking function with index 8
+Verifying i32. Result: 120, Expected: 120
+SUCCESS
+
+Running: Fibonacci of 7 (recursive)
+Invoking function with index 9
+Verifying i32. Result: 13, Expected: 13
+SUCCESS
+
+Running: F32 addition
+Invoking function with index 10
+Verifying f32. Result: 6, Expected: 6
+SUCCESS
+
+Running: F32 subtraction
+Invoking function with index 11
+Verifying f32. Result: 7, Expected: 7
+SUCCESS
+
+Running: F32 multiplication
+Invoking function with index 12
+Verifying f32. Result: 10, Expected: 10
+SUCCESS
+
+Running: F32 division
+Invoking function with index 13
+Verifying f32. Result: 2.5, Expected: 2.5
+SUCCESS
+
+Running: F32 min
+Invoking function with index 14
+Verifying f32. Result: 2.1, Expected: 2.1
+SUCCESS
+
+Running: F32 max
+Invoking function with index 15
+Verifying f32. Result: 3.5, Expected: 3.5
+SUCCESS
+
+Running: F32 abs
+Invoking function with index 16
+Verifying f32. Result: 3.5, Expected: 3.5
+SUCCESS
+
+Running: F32 neg
+Invoking function with index 17
+Verifying f32. Result: -3.5, Expected: -3.5
+SUCCESS
+
+Running: F32 sqrt
+Invoking function with index 18
+Verifying f32. Result: 4, Expected: 4
+SUCCESS
+
+Running: F32 ceil
+Invoking function with index 19
+Verifying f32. Result: 4, Expected: 4
+SUCCESS
+
+Running: F32 floor
+Invoking function with index 20
+Verifying f32. Result: 3, Expected: 3
+SUCCESS
+
+Running: F32 trunc
+Invoking function with index 21
+Verifying f32. Result: 3, Expected: 3
+SUCCESS
+
+Running: F32 nearest
+Invoking function with index 22
+Verifying f32. Result: 4, Expected: 4
+SUCCESS
+
+Running: F32 comparison eq
+Invoking function with index 23
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: F32 comparison ne
+Invoking function with index 24
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: F32 comparison lt
+Invoking function with index 25
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: F32 comparison gt
+Invoking function with index 26
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: F32 comparison le
+Invoking function with index 27
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: F32 comparison ge
+Invoking function with index 28
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Call F32 function
+Invoking function with index 29
+Verifying f32. Result: 4, Expected: 4
+SUCCESS
+
+Running: F64 addition
+Invoking function with index 30
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: F64 multiplication
+Invoking function with index 31
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: F64 sqrt
+Invoking function with index 32
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: F64 comparison gt
+Invoking function with index 33
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i32 to f32 (signed)
+Invoking function with index 34
+Verifying f32. Result: 42, Expected: 42
+SUCCESS
+
+Running: i32 to f32 (unsigned)
+Invoking function with index 35
+Verifying f32. Result: 42, Expected: 42
+SUCCESS
+
+Running: f32 to i32 (trunc signed)
+Invoking function with index 36
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: f32 to i32 (trunc unsigned)
+Invoking function with index 37
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: i32 to f64 (signed)
+Invoking function with index 38
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64 to i32 (trunc signed)
+Invoking function with index 39
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: f32 to f64 (promote)
+Invoking function with index 40
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64 to f32 (demote)
+Invoking function with index 41
+Verifying f32. Result: 3.5, Expected: 3.5
+SUCCESS
+
+Running: Reinterpret f32 as i32
+Invoking function with index 42
+Verifying i32. Result: 1065353216, Expected: 1065353216
+SUCCESS
+
+Running: Reinterpret i32 as f32
+Invoking function with index 43
+Verifying i32. Result: 1077936128, Expected: 1077936128
+SUCCESS
+
+Running: Drop value from stack
+Invoking function with index 44
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Multiple drops
+Invoking function with index 45
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: Nop instructions
+Invoking function with index 46
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Drop in computation
+Invoking function with index 47
+Verifying i32. Result: 50, Expected: 50
+SUCCESS
+
+Running: Memory size (initial)
+Invoking function with index 48
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Memory grow by 1 (returns old size)
+Invoking function with index 49
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Memory size after grow
+Invoking function with index 50
+Verifying i32. Result: 3, Expected: 3
+SUCCESS
+
+Running: Memory grow by 2 (returns old size)
+Invoking function with index 51
+Verifying i32. Result: 3, Expected: 3
+SUCCESS
+
+Running: Write to newly grown memory
+Invoking function with index 52
+Verifying i32. Result: 999, Expected: 999
+SUCCESS
+
+Running: Combined function calls
+Invoking function with index 53
+Verifying i32. Result: 11, Expected: 11
+SUCCESS
+
+Running: Combined float conversion
+Invoking function with index 54
+Verifying i32. Result: 21, Expected: 21
+SUCCESS
+
+Suite Summary: 54 / 55 passed.
+
+=================================================
+  RUNNING SUITE: Test 03
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Skipping unhandled Section ID: 4
+Parsing Memory Section (ID 5)...
+Parsing Export Section (ID 7)...
+Skipping unhandled Section ID: 9
+Parsing Code Section (ID 10)...
+Skipping unhandled Section ID: 11
+Running: Data: Read char 'H'
+Invoking function with index 6
+Verifying i32. Result: 0, Expected: 72
+FAILURE
+
+Running: Data: Read char 'e'
+Invoking function with index 7
+Verifying i32. Result: 0, Expected: 101
+FAILURE
+
+Running: Data: Read i32 42
+Invoking function with index 8
+Verifying i32. Result: 0, Expected: 42
+FAILURE
+
+Running: Data: Read i32 255
+Invoking function with index 9
+Verifying i32. Result: 0, Expected: 255
+FAILURE
+
+Running: Data: Read char 'T'
+Invoking function with index 10
+Verifying i32. Result: 0, Expected: 84
+FAILURE
+
+Running: Data: Read char '!'
+Invoking function with index 11
+Verifying i32. Result: 0, Expected: 33
+FAILURE
+
+Running: call_indirect: add
+Invoking function with index 12
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: call_indirect: sub
+Invoking function with index 13
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: call_indirect: mul
+Invoking function with index 14
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: call_indirect: div
+Invoking function with index 15
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: call_indirect: dynamic
+Invoking function with index 16
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: call_indirect: sequence
+Invoking function with index 17
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: i64.add
+Invoking function with index 18
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: i64.sub
+Invoking function with index 19
+Verifying i32. Result: 10, Expected: 12
+FAILURE
+
+Running: i64.mul
+Invoking function with index 20
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: i64.div_s
+Invoking function with index 21
+Verifying i32. Result: 5, Expected: 5
+SUCCESS
+
+Running: i64.div_u
+Invoking function with index 22
+Verifying i32. Result: 6, Expected: 6
+SUCCESS
+
+Running: i64.rem_s
+Invoking function with index 23
+Verifying i32. Result: 2, Expected: 2
+SUCCESS
+
+Running: i64.and
+Invoking function with index 24
+Verifying i32. Result: 10, Expected: 10
+SUCCESS
+
+Running: i64.or
+Invoking function with index 25
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: i64.xor
+Invoking function with index 26
+Verifying i32. Result: 15, Expected: 15
+SUCCESS
+
+Running: i64.shl
+Invoking function with index 27
+Verifying i32. Result: 20, Expected: 20
+SUCCESS
+
+Running: i64.shr_s
+Invoking function with index 28
+Verifying i32. Result: -4, Expected: -4
+SUCCESS
+
+Running: i64.shr_u
+Invoking function with index 29
+Verifying i32. Result: 4, Expected: 4
+SUCCESS
+
+Running: i64.rotl
+Invoking function with index 30
+Verifying i32. Result: 16, Expected: 16
+SUCCESS
+
+Running: i64.rotr
+Invoking function with index 31
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.clz
+Invoking function with index 32
+Verifying i32. Result: 60, Expected: 60
+SUCCESS
+
+Running: i64.ctz
+Invoking function with index 33
+Verifying i32. Result: 3, Expected: 3
+SUCCESS
+
+Running: i64.popcnt
+Invoking function with index 34
+Verifying i32. Result: 3, Expected: 3
+SUCCESS
+
+Running: i64.eq
+Invoking function with index 35
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.ne
+Invoking function with index 36
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.lt_s
+Invoking function with index 37
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.gt_s
+Invoking function with index 38
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.eqz
+Invoking function with index 39
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.extend_i32_s
+Invoking function with index 40
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: i64.extend_i32_u
+Invoking function with index 41
+Verifying i32. Result: 255, Expected: 255
+SUCCESS
+
+Running: i32.wrap_i64
+Invoking function with index 42
+Verifying i32. Result: 255, Expected: 255
+SUCCESS
+
+Running: i64.trunc_f32_s
+Invoking function with index 43
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: i64.trunc_f64_s
+Invoking function with index 44
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: f32.convert_i64_s
+Invoking function with index 45
+Verifying f32. Result: 0, Expected: 42
+FAILURE
+
+Running: f64.convert_i64_s
+Invoking function with index 46
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: i64.store/load
+Invoking function with index 47
+Verifying i32. Result: 255, Expected: 255
+SUCCESS
+
+Running: i64.load32_u
+Invoking function with index 48
+Verifying i32. Result: 240, Expected: 240
+SUCCESS
+
+Running: i64.load32_s
+Invoking function with index 49
+Verifying i32. Result: -2147483648, Expected: -2147483648
+SUCCESS
+
+Running: Call i64 function
+Invoking function with index 50
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Large i64 multiplication
+Invoking function with index 51
+Verifying i32. Result: 1000000000, Expected: 1000000000
+SUCCESS
+
+Running: i64 bit pattern
+Invoking function with index 52
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: Safe division
+Invoking function with index 53
+Verifying i32. Result: 5, Expected: 5
+SUCCESS
+
+Running: Divisor is zero
+Invoking function with index 54
+Verifying i32. Result: 0, Expected: 0
+SUCCESS
+
+Running: Check for division by zero
+Invoking function with index 55
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: Check memory in bounds
+Invoking function with index 56
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Check memory out of bounds
+Invoking function with index 57
+Verifying i32. Result: 0, Expected: 0
+SUCCESS
+
+Running: Check integer overflow
+Invoking function with index 58
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: Check modulo by zero
+Invoking function with index 59
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: Check i64 division by zero
+Invoking function with index 60
+Verifying i32. Result: -1, Expected: -1
+SUCCESS
+
+Running: Combined data and i64
+Invoking function with index 61
+Verifying i32. Result: 0, Expected: 84
+FAILURE
+
+Running: Combined indirect and i64
+Invoking function with index 62
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Running: Combined all features
+Invoking function with index 63
+ERROR: Unknown or unimplemented opcode: 0x11
+
+Suite Summary: 40 / 58 passed.
+
+=================================================
+  RUNNING SUITE: Test04
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Export Section (ID 7)...
+Parsing Code Section (ID 10)...
+Running: i32.rem_u
+Invoking function with index 0
+Verifying i32. Result: 2, Expected: 2
+SUCCESS
+
+Running: i32.rem_u (large)
+Invoking function with index 1
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.rem_u
+Invoking function with index 2
+Verifying i32. Result: 2, Expected: 2
+SUCCESS
+
+Running: i64.rem_u (large)
+Invoking function with index 3
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i32.le_u (less)
+Invoking function with index 4
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i32.le_u (equal)
+Invoking function with index 5
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i32.le_u (large)
+Invoking function with index 6
+Verifying i32. Result: 0, Expected: 0
+SUCCESS
+
+Running: i32.ge_u (greater)
+Invoking function with index 7
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i32.ge_u (equal)
+Invoking function with index 8
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i32.ge_u (large)
+Invoking function with index 9
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.le_s (less)
+Invoking function with index 10
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.le_s (negative)
+Invoking function with index 11
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.le_u (less)
+Invoking function with index 12
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.le_u (large)
+Invoking function with index 13
+Verifying i32. Result: 0, Expected: 0
+SUCCESS
+
+Running: i64.ge_s (greater)
+Invoking function with index 14
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.ge_s (negative)
+Invoking function with index 15
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.ge_u (greater)
+Invoking function with index 16
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: i64.ge_u (large)
+Invoking function with index 17
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: f32.copysign (neg)
+Invoking function with index 18
+Verifying f32. Result: -3.5, Expected: -3.5
+SUCCESS
+
+Running: f32.copysign (pos)
+Invoking function with index 19
+Verifying f32. Result: 3.5, Expected: 3.5
+SUCCESS
+
+Running: f32.copysign (both pos)
+Invoking function with index 20
+Verifying f32. Result: 3.5, Expected: 3.5
+SUCCESS
+
+Running: f64.copysign (neg)
+Invoking function with index 21
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.copysign (pos)
+Invoking function with index 22
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.sub
+Invoking function with index 23
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.div
+Invoking function with index 24
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.min
+Invoking function with index 25
+  Verifying f64_low32. Result: -858993459, Expected: -858993459
+SUCCESS
+
+Running: f64.max
+Invoking function with index 26
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.abs
+Invoking function with index 27
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.neg
+Invoking function with index 28
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.ceil
+Invoking function with index 29
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.floor
+Invoking function with index 30
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.trunc
+Invoking function with index 31
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.nearest
+Invoking function with index 32
+  Verifying f64_low32. Result: 0, Expected: 0
+SUCCESS
+
+Running: f64.le
+Invoking function with index 33
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: f64.ge
+Invoking function with index 34
+Verifying i32. Result: 1, Expected: 1
+SUCCESS
+
+Running: f32.store and f32.load
+Invoking function with index 35
+Verifying f32. Result: 3.14159, Expected: 3.14159
+SUCCESS
+
+Running: f32.store and f32.load (negative)
+Invoking function with index 36
+Verifying f32. Result: -2.5, Expected: -2.5
+SUCCESS
+
+Running: f64.store and f64.load
+Invoking function with index 37
+  Verifying f64_low32. Result: -1962634853, Expected: -1962634853
+SUCCESS
+
+Running: f64.store with large value
+Invoking function with index 38
+  Verifying f64_low32. Result: -1614907703, Expected: -1614907703
+SUCCESS
+
+Running: f32 arithmetic with load
+Invoking function with index 39
+Verifying f32. Result: 8, Expected: 8
+SUCCESS
+
+Running: Unreachable (not reached by return)
+Invoking function with index 40
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Unreachable (in false if branch)
+Invoking function with index 41
+Verifying i32. Result: 100, Expected: 100
+SUCCESS
+
+Running: Unreachable (in else branch, not taken)
+Invoking function with index 42
+Verifying i32. Result: 50, Expected: 50
+SUCCESS
+
+Suite Summary: 43 / 43 passed.
+
+=================================================
+  RUNNING SUITE: Test05
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Export Section (ID 7)...
+Parsing Code Section (ID 10)...
+Running: Deeply nested blocks with br
+Invoking function with index 0
+Verifying i32. Result: 42, Expected: 42
+SUCCESS
+
+Running: Blocks with different result types
+Invoking function with index 1
+Verifying i32. Result: 50, Expected: 50
+SUCCESS
+
+Running: Conditional nested (param 0)
+Invoking function with index 2
+Verifying i32. Result: 10, Expected: 100
+FAILURE
+
+Running: Conditional nested (param 1)
+Invoking function with index 3
+Verifying i32. Result: 10, Expected: 200
+FAILURE
+
+Running: Conditional nested (param 2)
+Invoking function with index 4
+Verifying i32. Result: 100, Expected: 300
+FAILURE
+
+Running: Function call within nested blocks
+Invoking function with index 5
+Verifying i32. Result: 100, Expected: 42
+FAILURE
+
+Running: Loop with nested blocks
+Invoking function with index 6
+Verifying i32. Result: 100, Expected: 5
+FAILURE
+
+Running: Multiple function calls with label preservation
+Invoking function with index 7
+Verifying i32. Result: 42, Expected: 30
+FAILURE
+
+Running: br_table with nested blocks (case 0)
+Invoking function with index 8
+Verifying i32. Result: 5, Expected: 400
+FAILURE
+
+Running: br_table with nested blocks (case 1)
+Invoking function with index 9
+Verifying i32. Result: 5, Expected: 300
+FAILURE
+
+Running: br_table with nested blocks (case 2)
+Invoking function with index 10
+Verifying i32. Result: 5, Expected: 200
+FAILURE
+
+Running: br_table with nested blocks (default)
+Invoking function with index 11
+Verifying i32. Result: 30, Expected: 100
+FAILURE
+
+Running: Complex control flow with value stack
+Invoking function with index 12
+ERROR: Unknown or unimplemented opcode: 0x0E
+
+Running: Recursive calls with blocks (factorial)
+Invoking function with index 13
+ERROR: Unknown or unimplemented opcode: 0x0E
+
+Running: Empty and void blocks
+Invoking function with index 14
+ERROR: Unknown or unimplemented opcode: 0x0E
+
+Running: Loop with nested blocks and label cleanup
+Invoking function with index 15
+ERROR: Unknown or unimplemented opcode: 0x0E
+
+Suite Summary: 2 / 16 passed.
+
+=================================================
+  RUNNING SUITE: Test06
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Export Section (ID 7)...
+Parsing Code Section (ID 10)...
+Running: i32.trunc_sat_f32_s: 10.5 -> 10
+Invoking function with index 0
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_s: -5.8 -> -5
+Invoking function with index 1
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_s: NaN -> 0
+Invoking function with index 2
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_s: Overflow -> INT32_MAX
+Invoking function with index 3
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_s: Underflow -> INT32_MIN
+Invoking function with index 4
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_u: 42.7 -> 42
+Invoking function with index 5
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_u: NaN -> 0
+Invoking function with index 6
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_u: Negative -> 0
+Invoking function with index 7
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f32_u: Overflow -> UINT32_MAX
+Invoking function with index 8
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_s: 123.456 -> 123
+Invoking function with index 9
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_s: -99.99 -> -99
+Invoking function with index 10
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_s: NaN -> 0
+Invoking function with index 11
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_s: Overflow -> INT32_MAX
+Invoking function with index 12
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_s: Underflow -> INT32_MIN
+Invoking function with index 13
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_u: 255.9 -> 255
+Invoking function with index 14
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_u: NaN -> 0
+Invoking function with index 15
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_u: Negative -> 0
+Invoking function with index 16
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i32.trunc_sat_f64_u: Overflow -> UINT32_MAX
+Invoking function with index 17
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f32_s: 42.5 -> 42
+Invoking function with index 18
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f32_s: -7.3 -> -7
+Invoking function with index 19
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f32_s: NaN -> 0
+Invoking function with index 20
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f32_u: 100.9 -> 100
+Invoking function with index 21
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f32_u: NaN -> 0
+Invoking function with index 22
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f32_u: Negative -> 0
+Invoking function with index 23
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f64_s: 1234.567 -> 1234
+Invoking function with index 24
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f64_s: -500.5 -> -500
+Invoking function with index 25
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f64_s: NaN -> 0
+Invoking function with index 26
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f64_u: 9999.1 -> 9999
+Invoking function with index 27
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f64_u: NaN -> 0
+Invoking function with index 28
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: i64.trunc_sat_f64_u: Negative -> 0
+Invoking function with index 29
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Edge Case: 0.0 f32 -> i32
+Invoking function with index 30
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Edge Case: 0.1 f32 -> i32
+Invoking function with index 31
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Edge Case: -0.0 f64 -> i32
+Invoking function with index 32
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Edge Case: Large positive in-range f64 -> i32
+Invoking function with index 33
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Suite Summary: 0 / 34 passed.
+
+=================================================
+  RUNNING SUITE: Test07
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Export Section (ID 7)...
+Skipping unhandled Section ID: 12
+Parsing Code Section (ID 10)...
+Skipping unhandled Section ID: 11
+Running: memory.fill: Basic
+Invoking function with index 0
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.fill: Range
+Invoking function with index 1
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.fill: Single byte
+Invoking function with index 2
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.fill: Zero
+Invoking function with index 3
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.copy: Basic
+Invoking function with index 4
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.copy: Single byte
+Invoking function with index 5
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.copy: Block
+Invoking function with index 6
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.copy: Overlapping
+Invoking function with index 7
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.init: Basic
+Invoking function with index 8
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.init: Partial
+Invoking function with index 9
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: memory.init: Second segment
+Invoking function with index 10
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: data.drop: After use
+Invoking function with index 11
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Combined: Fill then copy
+Invoking function with index 12
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Combined: Init then copy
+Invoking function with index 13
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Running: Combined: Zero-length operations
+Invoking function with index 14
+ERROR: Unknown or unimplemented opcode: 0xFC
+
+Suite Summary: 0 / 15 passed.
+
+=================================================
+  RUNNING SUITE: Test08
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Parsing Function Section (ID 3)...
+Skipping unhandled Section ID: 4
+Parsing Memory Section (ID 5)...
+Parsing Global Section (ID 6)...
+Suite Summary: 0 / 37 passed.
+
+=================================================
+  RUNNING SUITE: Test 09
+=================================================
+
+Wasm header validated.
+Parsing Type Section (ID 1)...
+Skipping unhandled Section ID: 2
+Parsing Function Section (ID 3)...
+Parsing Memory Section (ID 5)...
+Parsing Export Section (ID 7)...
+Parsing Code Section (ID 10)...
+Skipping unhandled Section ID: 11
+Running: WASI fd_write should update nwritten
+ERROR: Function index out of bounds
+
+Suite Summary: 0 / 1 passed.
+=================================================
+  OVERALL SUMMARY: 191 / 313 passed.
+=================================================
